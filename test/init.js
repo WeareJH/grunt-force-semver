@@ -1,11 +1,15 @@
 'use strict';
 
-var _getFails = require('../tasks/index.js');
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _assert = require('chai');
+var _tasksIndexJs = require('../tasks/index.js');
+
+var _tasksIndexJs2 = _interopRequireDefault(_tasksIndexJs);
+
+var _chai = require('chai');
 
 describe('getting fails', function () {
     it('returns empty array when no failures', function () {
-        _getFails.getFails(require('../package.json'), process.cwd());
+        _chai.assert.equal(_tasksIndexJs2['default'].getFails(require('../package.json'), process.cwd()).length, 0);
     });
 });

@@ -6,18 +6,23 @@
   "directories": {
     "test": "test"
   },
+  "files": [
+    "tasks"
+  ],
   "devDependencies": {
     "babel": "^5.0.10",
     "chai": "^2.2.0",
+    "grunt": "^0.4.5",
     "jshint": "^2.6.3",
-    "mocha": "^2.2.4"
+    "mocha": "^2.2.4",
+    "sinon": "^1.14.1"
   },
   "scripts": {
-    "lint": "jshint src/*/*.js",
-    "es6": "babel src --out-dir .",
-    "es6-watch": "babel src --out-dir . --watch",
-    "unit": "npm run es6 && mocha --recursive test",
-    "test": "npm run lint && npm run unit"
+    "lint": "jshint es6-src/*/*.js",
+    "es6": "babel es6-src --out-dir . --modules common",
+    "es6-watch": "babel es6-src --out-dir . --watch --modules common",
+    "unit": "mocha --recursive test",
+    "test": "npm run lint && npm run es6 && npm run unit && grunt forceSemver"
   },
   "author": "",
   "license": "ISC",
