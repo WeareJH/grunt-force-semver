@@ -1,7 +1,7 @@
 {
-  "name": "es6-minimal-starter",
+  "name": "grunt-force-semver",
   "version": "1.0.0",
-  "description": "Just the basics for starting an es6 Node/IOjs project",
+  "description": "Fail the build if dependencies are outdated",
   "main": "lib/index.js",
   "directories": {
     "test": "test"
@@ -20,5 +20,8 @@
     "test": "npm run lint && npm run unit"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "semver": "^4.3.3"
+  }
 }
