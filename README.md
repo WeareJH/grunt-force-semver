@@ -21,11 +21,12 @@ Within your Gruntfile.js, load the task.
 grunt.loadNpmTasks('grunt-force-semver')
 ```
 
-Now you can prepend it to any build tasks that are appropriate
+Now you can prepend it to any build tasks that are appropriate...
 
 ```js
 grunt.registerTask('build-css',    ['forceSemver', 'sass', 'autoprefixer', 'cssmin', 'cachebreaker:css']);
 ```
 
-
-
+... which means that if someone on your team bumps a major version of `autoprefixer`
+for example, the build will fail early and you'll be presented with a nice 
+error message explaining the problem. 
