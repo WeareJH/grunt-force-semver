@@ -1,4 +1,4 @@
-#grunt-force-semver
+#grunt-force-semver [![Build Status](https://travis-ci.org/WeareJH/grunt-force-semver.svg?branch=master)](https://travis-ci.org/WeareJH/grunt-force-semver)
 
 An automated way (without hitting the network) to ensure that all of you 
 team are using up-to-date dependencies.
