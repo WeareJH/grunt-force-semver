@@ -29,4 +29,10 @@ grunt.registerTask('build-css',    ['forceSemver', 'sass', 'autoprefixer', 'cssm
 
 ... which means that if someone on your team bumps a major version of `autoprefixer`
 for example, the build will fail early and you'll be presented with a nice 
-error message explaining the problem. 
+error message explaining the problem.
+
+## Contributions
+
+You should only edit files in `es6-src` as the source code for this module is written 
+in ES6. Run `npm run es6` following any changes to have it compiled back down
+into ES5
